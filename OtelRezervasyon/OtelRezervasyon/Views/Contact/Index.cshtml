@@ -1,0 +1,38 @@
+﻿@using OtelRezervasyon.Models.Sınıflar
+@model  List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestDüzen.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgileri</h3>
+                
+            </div>
+            @Html.Action("Iletisim", "Contact")
+        </div>
+            <div class="clear"></div>
+         
+        
+     
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</body>
+</html>

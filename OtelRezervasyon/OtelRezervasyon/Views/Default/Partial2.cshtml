@@ -1,0 +1,16 @@
+﻿@using OtelRezervasyon.Models.Sınıflar;
+@model List<Blog>
+    @foreach(var x in Model) {
+<div class="right">
+
+    <div class="bot-left">
+        <img src="@x.BlogImage" alt="" />
+    </div>
+    <div class="left-text">
+        <h4>@x.Baslik</h4>
+        <span class="doller">@x.Fiyat₺</span>
+        <p>Konaklama,Seyehat,Yemek içindedir</p>
+        <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Fazla Bilgi >></span></a></p>
+    </div>
+</div>
+    }

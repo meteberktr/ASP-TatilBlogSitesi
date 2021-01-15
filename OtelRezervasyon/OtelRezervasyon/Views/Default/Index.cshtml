@@ -1,0 +1,156 @@
+﻿@using OtelRezervasyon.Models.Sınıflar
+@model  List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestDüzen.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web/js/jquery.min.js"></script>
+    <script src="~/web/js/responsiveslides.min.js"></script>
+
+   
+</head>
+<body>
+   
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Her zaman en uygun</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restorant</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuş</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Tatil fırsatları</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li><img src="@x.BlogImage" alt=""></li>
+                                   @* <li><img src="@x.BlogImage" alt=""></li>
+                                        <li><img src="@x.BlogImage" alt=""></li>
+                                        <li><img src="@x.BlogImage" alt=""></li>*@
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Türkiyenin en büyük Rezarvasyon Sitesine hoşgeldiniz !</h3>
+                    <h2>En iyi ve uygun fiyata en güzel tatil planlama </h2>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        <div class="padding1">
+                            <h4>Önerilen yerler</h4>
+                            <div class="box-left">
+                                <div class="bot-img">
+                                    <img src="~/web/images/ayasofya.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Ayasofya, dünya mimarlık tarihinin günümüze kadar ayakta kalan en önemli eserlerinden ve en çok ziyaret edilen yapılarından.  </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/balıklıgöl.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Balıklıgöl Platosu'nda Üç semavi dinin atası olarak kabul edilen Hz.İbrahim'in doğduğu Mağaradır. Ziyaretçisi de çok fazladır. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/gelibolu.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Çanakkalenin en güzel ilçelerinden biri olan Geliboluda hem tarihi hemde doğal güzelliklerini keşfedebilirsiniz. </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box1-left">
+                                <div class="bot-img">
+                                    <img src="~/web/images/topkapı.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Topkapı Sarayı Müzesi,İstanbul tarihinin görkemli tanığı Bir dönem cihana hükmetmiş Osmanlı padişahlarına ev sahipliği yapmıştır. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/uludag.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Bursanın en güzel ilçelerinden biri olan Uludağ hem tarihi hemde doğal güzelliklerini keşfedebilirsiniz. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/kızkulesi.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Kız Kulesi, tarih içinde gözetleme kulesi, deniz feneri olarak kullanılmış, Boğaz girişini belirten bir mihenk noktasıdır. </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

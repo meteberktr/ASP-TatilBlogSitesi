@@ -1,0 +1,30 @@
+﻿@using OtelRezervasyon.Models.Sınıflar
+@model List<iletisim>
+@{
+    ViewBag.Title = "IletisimListesi";
+    Layout = "~/Views/Shared/_AdminDüzen.cshtml";
+}
+
+<h2>Iletisim Listesi</h2>
+
+
+<table class="table table-bordered" >
+    <tr>
+        <th>ID</th>
+        <th>AdSoyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model) {
+<tr>
+    <td>@x.ID</td>
+    <td>@x.AdSoyad</td>
+    <td>@x.Mail</td>
+    <td>@x.Konu</td>
+    <td>@x.Mesaj</td>
+    <td><a href="/Admin/IletisimSil/@x.ID" class="btn btn-danger">Sil</a></td>
+</tr>
+    }
+</table>
